@@ -1,1 +1,1 @@
-# EBAC-criterios-aceitacao-gherkin
+# EBAC-critérios-aceitação-gherkin
