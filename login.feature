@@ -1,13 +1,13 @@
-Feature: Login na plataforma  
-    
-    Scenario: Login na plataforma com dados válidos
+Funcionalidade: Login na plataforma  
 
-        Given o usuário acessar a plataforma da EBAC-Shop
-        When providenciar dados válidos e fizer login
-        Then o usuário deverá ser redirecionado para a tela de checkout
+Cenário: Login válido
 
-    Scenario: Login na plataforma com dados inválidos
+Dado que eu esteja na página de login
+E eu insira meus dados válidos de usuário e senha
+Então eu devo ser direcionado para a tela inicial do site
 
-        Given o usuário acessar a plataforma da EBAC-Shop
-        When providenciar dados inválidos e fizer login
-        Then o sistema deverá exibir a mensagem "Usuário ou senha inválidos"
+Cenário: Login inválido
+
+Dado que eu esteja na página de login
+E eu insira um campo inválido de usuário ou senha
+Então eu devo ver uma mensagem de alerta "Usuário ou senha inválidos" exibida na tela.
