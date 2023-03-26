@@ -1,23 +1,12 @@
-Feature: Tela de cadastro - Checkout
+Funcionalidade: Tela de cadastro - Checkout
 
-    Scenario: Preencher o formulário de checkout de produto corretamente
+Dado que estou na página de cadastro da EBAC-SHOP
+Quando preencho todos os "<Campos Obrigatórios>" com informações "<Tipo de informação>"
+Então o sistema deve exibir a mensagem "<Tipo de mensagem>"
 
-        Given o usuário acessar a página de cadastro da EBAC-Shop
-        When preencher todos os campos obrigatórios
-        And o campo de email estiver com o formato correto
-        Then o usuário poderá finalizar a compra do produto
+Exemplos:
 
-
-    Scenario: Preencher o formulário de checkout com formato de email inválido
-
-        Given o usuário acessar a página de cadastro da EBAC-Shop
-        When preencher todos os campos obrigatórios
-        But o campo de email estiver com o formato incorreto
-        Then o sistema deverá alertar o usuário do formato de email incorreto
-
-
-    Scenario: Finalizar compra com campos vazios
-
-        Given o usuário acessar a página de cadastro da EBAC-Shop
-        When o usuário finalizar a compra sem preencher todos os campos obrigatórios
-        Then o sistema deverá exibir uma mensagem de alerta
+| Campos obrigatórios | Tipo de informação | Tipo de mensagem			     |
+| Todos campos com *  | Sem preenchimento  | Preencha os campos obrigatórios |
+| Todos campos com *  | Dados válidos      | -								 |
+| E-mail              | E-mail inválido    | E-mail inválido				 |
